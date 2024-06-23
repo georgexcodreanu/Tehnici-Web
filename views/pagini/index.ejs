@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Comentariu-->
+
+<html lang="ro">
+    <head>
+        <%- include("../fragmente/head.ejs") %>
+        <meta name="keywords"
+            content="Vestiarul de fotbal, fotbal, tricouri de fotbal, pantaloni, sosete, incaltaminte fotbal, mingi de fotbal, echipament de protectie fotbal, ghiduri de cumparare fotbal, tricouri cluburi de fotbal, accesorii fotbal, tricouri cluburi de fotbal, produse fotbalistice, sezon de fotbal">
+        <!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="description"
+            content="Echipamente de fotbal pentru toate varstele. Sustine-ti echipa favorita achizitionand unul din tricourile acesteia la un pret cat mai accesibil!">
+        <!-- descrierea paginii, adesea apare sub link când sunt afișate rezultatele căutării -->
+        <title>Vestiarul de fotbal</title>
+    </head>
+
+    <body>
+        <%- include("../fragmente/header.ejs") %>
+        <main>
+            <div id="grid-pagina">
+                <section id="acasa">
+                    <h2>Bine ati venit!</h2>
+                    <p>Ip: <%- locals.ip %></p>
+                    <p>Bine ati venit la magazinul nostru de <b>echipamente de fotbal</b>! Suntem dedicați să vă oferim cea
+                        mai bună experiență de cumpărături, oferindu-vă acces la cele mai recente și mai variate produse din
+                        lumea <b>fotbalului.</b></p>
+
+                    <figure>
+
+                            <img class="barcelona1" src="./resurse/imagini/tricourifotbal.jpg" alt="imagine tricouri"
+                                title="FC Barcelona" />
+                            <img class="real" src="./resurse/imagini/tricou-real-madrid-s058~5246.jpg"
+                                alt="tricou personalizat" title="Real Madrid" />
+                            <img class="liverpool"
+                                src="./resurse/imagini/tricou-acasa-nike-liverpool-2021-2022-rosu-37777308_0_full.jpg"
+                                alt="imagine tricouri" title="Liverpool FC" />
+                            <img class="mbappe" src="./resurse/imagini/mbappe.jpg" alt="imagine tricouri"
+                                title="Kylian Mbappe" />
+                            <img class="barcelona1" src="./resurse/imagini/tricourifotbal.jpg" alt="imagine tricouri"
+                                title="FC Barcelona" />
+
+                    </figure>
+                </section>
+                <section id="galerie-statica">
+                    <h2>Galerie</h2>
+                    <div id="grid-galerie">
+                        <% 
+                            var vZile=["duminică", "luni", "marti", "miercuri", "joi", "vineri", "sambătă"];
+                            var d=new Date();
+                            var ziCurenta=vZile[d.getDay()];
+                            for (let imag of locals.imagini) { 
+                                if (imag?.zile?.includes(ziCurenta))
+                                {
+                                %>
+                                    <figure>
+                                        <picture>
+                                            <source srcset="<%= imag.fisier_mediu %>" media="(max-width: 1200px)" />
+                                            <img src="<%= imag.fisier %>" alt="imagini tricouri">
+                                        </picture>
+                                    <figcaption><%= imag.descriere %></figcaption>
+                                    </figure>
+                            <% } %>
+                        <% } %>
+                    </div>
+                </section>
+
+                <section id="produse">
+                    <h2>Produse</h2>
+                    <p>Magazinul nostru vă oferă o selecție largă de <b>echipamente de fotbal</b>, astfel încât să vă puteți
+                        echipa complet pentru a vă susține echipa preferată sau pentru a vă bucura de meciurile pe teren
+                        propriu. De la <b>tricouri</b> și <b>pantaloni</b>, până la <b>ghete</b> și <b>mingi de fotbal</b>,
+                        aveți la dispoziție tot ce aveți nevoie pentru a vă îmbunătăți performanța și a vă bucura de sportul
+                        preferat.</p>
+                    <ul>
+                        <li>Tricouri</li>
+                        <li>Pantaloni</li>
+                        <li>Ghete</li>
+                        <li>Mingi</li>
+                        <li>Accesorii</li>
+                    </ul>
+                </section>
+
+                <section id="promotii">
+                    <h2>Promotii</h2>
+                    <p>Profită acum de ofertele noastre speciale pentru <b>echipamente de fotbal</b>! Echipa <abbr
+                            title="Vestiarul de fotbal">VdF</abbr> vă oferă cele mai bune prețuri și reduceri de pana la
+                        <s>15%</s> <ins>20%</ins> pentru a vă ajuta să economisiți bani și să vă echipați complet pentru
+                        următorul <b>sezon de fotbal</b>. Indiferent dacă sunteți jucător profesionist sau fan pasionat,
+                        veți găsi cu siguranță oferte care să vă satisfacă nevoile și să vă inspire să vă susțineți echipa
+                        preferată în stil.
+                    </p>
+                </section>
+
+                <section id="recenzii">
+                    <h2>Recenzii</h2>
+                    <div id="ifr">
+                        <a href="https://www.youtube.com/embed/WvahmZdYw_g" target="ifr-video">Recenzie tricou FC
+                            Barcelona</a>
+                        <a href="https://www.youtube.com/embed/IUOeTrIFurk" target="ifr-video">Recenzie ghete Nike</a>
+                    </div class="taburi-iframe">
+
+                    <iframe name="ifr-video" width="560" height="315"
+                        src="https://www.youtube.com/embed/WvahmZdYw_g?si=ysMx7EjAL3RYNA4r" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+
+                </section>
+                <section id="faq">
+                    <h2>Intrebari frecvente</h2>
+                    <details>
+                        <summary>Produsele dumneavoastră sunt originale?</summary>
+                        <p>Da!</p>
+                    </details>
+                    <details>
+                        <summary>Oferiți garanție pentru produsele achiziționate??</summary>
+                        <p>Da!</p>
+                    </details>
+                    <details>
+                        <summary>Puteți personaliza tricourile cu nume și număr la cerere?</summary>
+                        <p>Din pacate nu oferim acest serviciu momentan, dar in viitor va fi posibil acest lucru.</p>
+                    </details>
+                </section>
+                <section id="orar">
+                    <h2>Orar</h2>
+                    <table id="tab-orar" class="stil-tabel">
+                        <thead>
+
+                            <tr>
+                                <th>Perioadă</th>
+                                <th>Zi</th>
+                                <th>Interval dimineata</th>
+                                <th>Pauza de masa</th>
+                                <th>Interval seară</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5">Zile<br />Lucrătoare</td>
+                                <td>Luni</td>
+                                <td>10-12</td>
+                                <td>12-14</td>
+                                <td>14-20</td>
+                            </tr>
+                            <tr>
+                                <td>Marti</td>
+                                <td>9-12</td>
+                                <td>12-14</td>
+                                <td>14-21</td>
+                            </tr>
+                            <tr>
+                                <td>Miercuri</td>
+                                <td>9-11</td>
+                                <td>11-13</td>
+                                <td>14-21</td>
+                            </tr>
+                            <tr>
+                                <td>Joi</td>
+                                <td>9-11</td>
+                                <td>11-13</td>
+                                <td>14-21</td>
+                            </tr>
+                            <tr>
+                                <td>Vineri</td>
+                                <td>9-12</td>
+                                <td>12-14</td>
+                                <td>14-19</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">Weekend</td>
+                                <td>Sambata</td>
+                                <td>10-12</td>
+                                <td>12-13</td>
+                                <td>13-16</td>
+                            </tr>
+                            <tr>
+                                <td>Duminica</td>
+                                <td>10-14</td>
+                                <td>-</td>
+                                <td>inchis</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                                <td>Închis cu ocazia sărbătorilor legale.</td>
+                        </tfoot>
+                    </table>
+                </section>
+                <section id="anunturi">
+                    <h2>Anunturi</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut incidunt quis laudantium esse, eum quasi
+                        beatae repudiandae modi magnam voluptates quisquam asperiores ducimus explicabo cumque similique,
+                        temporibus dolore. Et, ipsa.</p>
+                </section>
+                <section id="calendar">
+                    <h2>Calendar evenimente</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At porro recusandae impedit officia sint
+                        odio iure alias corporis odit dolorum sapiente consectetur soluta ullam, temporibus laudantium
+                        ducimus amet nihil accusamus.</p>
+                </section>
+            </div>
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+        </body>
+
+    </html>

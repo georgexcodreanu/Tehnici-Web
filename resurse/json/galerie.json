@@ -1,0 +1,45 @@
+{
+	"cale_galerie":"/resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"Echipament fotbal Franţa Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Franta",
+			"zile":["duminică"]
+		},
+		{
+			"fisier":"Echipament fotbal Anglia Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Anglia",
+			"zile":["duminică"]
+			
+		},
+		{
+			"fisier":"Echipament fotbal Spania Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Spania",
+			"zile":["duminică"]
+		},
+		{
+			"fisier":"Echipament fotbal Italia Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Italia",
+			"zile":["duminică"]
+		},
+		{
+			"fisier":"Echipament fotbal Romania Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Romania",
+			"zile":["duminică"]
+		},
+		{
+			"fisier":"Echipament fotbal Germania Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Germania",
+			"zile":["duminică"]
+		},
+		{
+			"fisier":"Echipament fotbal Belgia Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Belgia",
+			"zile":["duminică"]
+		},{
+			"fisier":"Echipament fotbal Portugalia Tricou Acasa European 2024 maneca scurta-500x500.jpg",
+			"descriere":"Portugalia",
+			"zile":["duminică"]
+		}
+	]
+}

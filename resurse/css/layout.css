@@ -1,0 +1,262 @@
+html {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+}
+
+
+#grid-galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5px;
+    counter-reset: nrimag 0;
+    grid-template-areas: 
+        "img1 img2 ."
+        "img3 . img4"
+        ". img5 img6"
+        "img7 . img8"
+        "img9 img10 .";
+}
+
+
+@media(max-width: 1023px) {
+    #grid-galerie {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "img1 img2"
+            "img3 img4"
+            "img5 img6"
+            "img7 img8"
+            "img9 img10";
+    }
+}
+
+@media (max-width: 767px) {
+    #grid-galerie {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6"
+            "img7"
+            "img8"
+            "img9"
+            "img10";
+    }
+}
+
+
+
+
+#grid-galerie figure:nth-of-type(1) {
+    grid-area: img1;
+}
+
+#grid-galerie figure:nth-of-type(2) {
+    grid-area: img2;
+}
+
+#grid-galerie figure:nth-of-type(3) {
+    grid-area: img3;
+}
+
+#grid-galerie figure:nth-of-type(4) {
+    grid-area: img4;
+}
+
+#grid-galerie figure:nth-of-type(5) {
+    grid-area: img5;
+}
+
+#grid-galerie figure:nth-of-type(6) {
+    grid-area: img6;
+}
+
+#grid-galerie figure:nth-of-type(7) {
+    grid-area: img7;
+}
+
+#grid-galerie figure:nth-of-type(8) {
+    grid-area: img8;
+}
+
+#grid-galerie figure:nth-of-type(9) {
+    grid-area: img9;
+}
+
+#grid-galerie figure:nth-of-type(10) {
+    grid-area: img10;
+}
+
+
+#grid-galerie figcaption {
+    text-align: center;
+    counter-increment: nrimag 1;
+}
+
+#grid-galerie figcaption::before {
+    content: counter(nrimag, lower-roman) ". ";
+}
+
+#grid-galerie img {
+    width: 100%;
+    height: auto;
+    transition: border-radius 0.5s ease, filter 0.8s ease;
+    filter: sepia(100%);
+}
+
+#grid-galerie img:hover {
+    border-radius: 10px;
+    filter: sepia(0%);
+}
+
+#grid-galerie figure {
+    display: inline-block;
+    height: auto;
+    border-radius: 0;
+    transition: transform 1s ease;
+}
+
+
+#grid-galerie figure:hover figcaption {
+    color: #FF0000; /* Schimbați culoarea textului la hover */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Adăugați umbra textului la hover */
+}
+
+
+
+
+
+
+
+#grid-pagina {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "acasa acasa acasa acasa"
+        "promotii orar orar recenzii"
+        "produse produse produse produse"
+        "faq faq anunturi calendar"
+        "galerie-statica galerie-statica galerie-statica galerie-statica";
+}
+
+#grid-pagina>* {
+    padding: 1em;
+    border: 2px solid black;
+}
+
+#recenzii iframe {
+    width: 100%;
+    height: 68%;
+}
+
+.barcelona1 {
+    width: 15%;
+}
+
+.real {
+    width: 20%;
+}
+
+.liverpool {
+    width: 20%;
+}
+
+.mbappe {
+    width: 20%;
+}
+
+#acasa {
+    grid-area: acasa;
+}
+
+#produse {
+    grid-area: produse;
+}
+
+#promotii {
+    grid-area: promotii;
+}
+
+#recenzii {
+    grid-area: recenzii;
+}
+
+#faq {
+    grid-area: faq;
+}
+
+#orar {
+    grid-area: orar;
+}
+
+#calendar {
+    grid-area: calendar;
+}
+
+#anunturi {
+    grid-area: anunturi;
+}
+
+#galerie-statica {
+    grid-area: galerie-statica;
+}
+
+
+@media screen and (max-width:1200px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    #grid-pagina {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "acasa acasa "
+            "orar recenzii"
+            "promotii promotii"
+            "produse produse "
+            "faq faq "
+            "calendar anunturi"
+            "galerie-statica galerie-statica";
+    }
+}
+
+@media screen and (max-width:800px) {
+    html {
+        font-size: 12px;
+    }
+
+    #grid-pagina {
+        display: block;
+    }
+}
+
+#tab-orar th,
+#tab-orar td {
+    border: 1px solid black;
+}
+
+#tab-orar {
+    border-collapse: collapse;
+    width: 100%;
+    border: 5px inset #E0283D;
+}
+
+#tab-orar tbody tr:hover {
+    transition: outline 0.5s ease;
+    outline: 5px solid rgba(0, 0, 0, 0.7);
+}
+
+#tab-orar tr:nth-child(even)+tr:nth-child(odd) td {
+    border-bottom: 3px solid #E04228;
+}
+
+#tab-orar tr:nth-child(odd)+tr:nth-child(even) td {
+    border-bottom: 3px solid #E08328;
+}

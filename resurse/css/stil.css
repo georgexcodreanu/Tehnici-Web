@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(236, 186, 186);
+    --culoare1: #E06328;
+    --spatiere: 100px;
+    padding-left: var(--spatiere);
+    padding-right: var(--spatiere);
+}
+
+
+#link-top {
+    position: fixed;
+    bottom: 0.3em;
+    opacity: 0.5;
+    left: 0.3em;
+    width: 3rem;
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 50% 50% 0 0;
+    background: #E06328;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+#link-top:hover {
+    opacity: 1;
+    box-shadow: inset 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+#triunghi p {
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    color: #E09E28;
+    transition: .5s ease-out;
+}
+#triunghi p:hover{
+    font-size: 75px;
+}

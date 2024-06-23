@@ -1,0 +1,16 @@
+{
+  "name": "tehnici-web",
+  "version": "1.0.0",
+  "description": "Cele mai variate produse din lumea fotbalului pentru toate varstele. Sustine-ti echipa favorita achizitionand unul din tricourile acesteia la un pret cat mai accesibil!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Codreanu George",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "sharp": "^0.33.4"
+  }
+}

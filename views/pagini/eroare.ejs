@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Echipamente de fotbal pentru toate varstele. Sustine-ti echipa favorita achizitionand unul din tricourile acesteia la un pret cat mai accesibil!">
+        <meta name="keywords" content="Vestiarul de fotbal, fotbal, tricouri de fotbal, pantaloni, sosete, incaltaminte fotbal, mingi de fotbal, echipament de protectie fotbal, ghiduri de cumparare fotbal, tricouri cluburi de fotbal, accesorii fotbal, tricouri cluburi de fotbal, produse fotbalistice, sezon de fotbal">
+        <title>Vestiarul de fotbal - eroare</title>
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css"
+        <%- include("../fragmente/head.ejs");  %> 
+
+
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <div id="err-coloane">
+			<div id="err-imag">
+				<img src="<%- locals.imagine %>" />
+			</div>
+			<section>
+				<h2><%- locals.titlu %></h2>
+				<p><%- locals.text %></p>
+			</section>
+		</div>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+
+    </body>
+</html>
